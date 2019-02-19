@@ -485,7 +485,7 @@ Most properties should have a comment.  Use /// for property comments as it'll s
 
 Multiline comments can be set with `/* */` or `///`, but we prefer the later because it matches the format of the template provided by Xcode (`⌥⌘/` shortcut). The template contains most of the documentation needed, even when you may have to extend it. A minor disadvange is that it adds superfluous characters that damage readability, but `///` is more productive overall.
 
-### API documentation policy
+### Framework API documentation policy
 
 Framework's API should always be documented by adding the proper documentation to the classes and methods offered (exposed) by the framework (see [Function Declarations](#function-declarations) for the suggested format).
 
