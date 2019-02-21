@@ -37,6 +37,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
   * [Syntactic Sugar](#syntactic-sugar)
 * [Functions vs Methods](#functions-vs-methods)
 * [Functions vs Computed Variables](#functions-vs-computed-variables)
+* [Actions vs Delegates](#actions-vs-delegates)
 * [Memory Management](#memory-management)
   * [Extending Lifetime](#extending-lifetime)
 * [Access Control](#access-control)
@@ -967,6 +968,34 @@ let repositoryToDomainMapper = AnyMapper(ProjectCollectionRepositoryToDomainMapp
 ## Functions vs Methods
 
 Free functions, which aren't attached to a class or type, should be used sparingly. When possible, prefer to use a method instead of a free function. This aids in readability and discoverability.
+
+Free functions are most appropriate when they aren't associated with any particular type or instance.
+
+## Actions vs Delegates
+
+Early on in the project, we wanted to discuss how to handle executing a function from one class within another class.
+The two main options were to use delegates vs using closures that we could pass around and execute at a given time.
+
+Since the delegate pattern would require us to assign a single delegate object to our views, passing an action to the view as a closure allows us to avoid any dependencies. It also allows us to pass the actions themselves to the initialiser rather than the delegate which guarantees that they can be executed throughout as long as we have a reference to the executing class rather than passing this action back to the delegate object.
+
+**Preferred**
+```swift
+ let notifyAction: (() -> Void)?
+    init(notifyAction: (() -> Void)?) {
+        
+        self.notifyAction = notifyAction
+       
+    }
+```
+
+**Not Preferred**
+```swift
+let delegate: SomeProtocol
+    init(delegate: SomeProtocol?) {
+        
+        self.delegate = delegate
+    }
+```
 
 Free functions are most appropriate when they aren't associated with any particular type or instance.
 
