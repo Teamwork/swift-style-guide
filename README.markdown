@@ -435,7 +435,7 @@ func funStuff() {
 func second(){
 
   hello()
-}
+}    fatalError("impossible")
 
 func third(){
 
@@ -1281,6 +1281,7 @@ guard
   let number2 = number2,
   let number3 = number3 
   else {
+  
     fatalError("impossible")
 }
 
