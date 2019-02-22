@@ -435,7 +435,7 @@ func funStuff() {
 func second(){
 
   hello()
-}    fatalError("impossible")
+}
 
 func third(){
 
