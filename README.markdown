@@ -354,7 +354,7 @@ var deviceModels: [String]
 
 ## Spacing
 
-* Indent using tabs characters - we're programmers, if we can't deal with the concept of something having variable values, get out now. The default size of a tab should be set to 4 spaces.  Be sure to set this preference in Xcode and in the Project settings as shown below:
+* Indent using space characters. The default indent witdth should be set to 4 spaces.  Be sure to set this preference in Xcode and in the Project settings as shown below:
 
 ![Xcode indent settings](screens/indentation.png)
 
@@ -385,7 +385,7 @@ else {
 }
 ```
 
-* There should be three blank lines between methods to help with separatation, visual clarity and organization. Lines with similar or connected behaviour should not be separated by empty newlines.  Whitespace within methods should separate and group functionality, but having too many sections in a method often means you should refactor into several methods.
+* There should be one blank lines between methods to help with separatation, visual clarity and organization. Lines with similar or connected behaviour should not be separated by empty newlines.  Whitespace within methods should separate and group functionality, but having too many sections in a method often means you should refactor into several methods.
 
 **Preferred**:
 ```swift
