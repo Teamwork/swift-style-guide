@@ -475,19 +475,20 @@ class TestDatabase : Database {
 
 ### Switch Spacing
 
+The `switch` and `case` reserved words will be in the same column (same vertical alignment, no indentation)
 In the case of `switch`, we'll go against the rule of adding 1 blank vertical space before the beginning of each context, and go for this style:
 
 ```swift
 switch self {
 
-    case .something:
-         break
+case .something:
+      break
 
-    case .other:
-         break
+case .other:
+      break
 
-    default:
-         break
+default:
+      break
 }
 ```
 
