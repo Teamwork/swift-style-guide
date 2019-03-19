@@ -19,6 +19,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
   * [Unused Code](#unused-code)
   * [Minimal Imports](#minimal-imports)
 * [Spacing](#spacing)
+  * [Switch Spacing](#switch-spacing)
 * [Comments](#comments)
 * [Classes and Structures](#classes-and-structures)
   * [Use of Self](#use-of-self)
@@ -471,6 +472,25 @@ class TestDatabase : Database {
 * Avoid trailing whitespaces at the ends of lines.
 
 * Add a single newline character at the end of each file.
+
+### Switch Spacing
+
+The `switch` and `case` reserved words will be in the same column (same vertical alignment, no indentation)
+In the case of `switch`, we'll go against the rule of adding 1 blank vertical space before the beginning of each context, and go for this style:
+
+```swift
+switch self {
+
+case .something:
+      break
+
+case .other:
+      break
+
+default:
+      break
+}
+```
 
 ## Comments
 
