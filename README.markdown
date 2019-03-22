@@ -385,7 +385,7 @@ else {
 }
 ```
 
-* There should be one blank lines between methods to help with separatation, visual clarity and organization. Lines with similar or connected behaviour should not be separated by empty newlines.  Whitespace within methods should separate and group functionality, but having too many sections in a method often means you should refactor into several methods.
+* There should be one blank line between methods to help with separatation, visual clarity and organization. Lines with similar or connected behaviour should not be separated by empty newlines.  Whitespace within methods should separate and group functionality, but having too many sections in a method often means you should refactor into several methods.
 
 **Preferred**:
 ```swift
