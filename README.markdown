@@ -657,29 +657,18 @@ func reticulateSplines(spline: [Double]) -> Bool {
   // reticulate code goes here
 }
 ```
-
-For functions with long signatures, put each parameter on a new line and add an extra indent on subsequent lines:
-
+For functions with long signatures (more than two parameters), add line breaks after each parameter:
 
 **Preferred:**
 ```swift
-<<<<<<< HEAD
 func reticulateSplines(spline: [Double],
                        adjustmentFactor: Double,
                        translateConstant: Int,
                        comment: String) -> Bool {
-=======
-func reticulateSplines(
-  spline: [Double], 
-  adjustmentFactor: Double,
-  translateConstant: Int, 
-  comment: String
-) -> Bool {
->>>>>>> master
+
   // reticulate code goes here
 }
 ```
-
 
 **Not Preferred:**
 ```swift
