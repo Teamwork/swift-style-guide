@@ -728,7 +728,6 @@ let success = reticulateSplines(
   translateConstant: 2,
   comment: "normalize the display")
 ```
->>>>>>> master
 
 ## Closure Expressions
 
