@@ -1486,6 +1486,7 @@ Sometimes we need to add an `@objc` annotation to a `var`, `let` or `func`. In t
 ```swift
 @objc 
 func refreshAllProjects(deleteAllData: Bool = true) {
+
         retrieveProjects()
 }
 ```
@@ -1494,6 +1495,7 @@ func refreshAllProjects(deleteAllData: Bool = true) {
 
 ```swift
 @objc func refreshAllProjects(deleteAllData: Bool = true) {
+
         retrieveProjects()
 }
 
