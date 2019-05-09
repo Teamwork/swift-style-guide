@@ -52,6 +52,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
 * [Multi-line String Literals](#multi-line-string-literals)
 * [No Emoji](#no-emoji)
 * [Deprecated](#deprecated)
+* [@objc annotation](#objc-annotation)
 * [Linting](#linting)
 * [Organization and Bundle Identifier](#organization-and-bundle-identifier)
 * [Localisation](#localisation)
@@ -1475,6 +1476,29 @@ The compiler will show a warning ---> 'titleLabel' is deprecated: This has to be
         }
     }
 ```
+
+## Objc annotation
+
+Sometimes we need to add an `@objc` annotation to a `var`, `let` or `func`. In that case we'll leave the `@objc` annotation in its own line, add a line break and then the statement it's annotating in a new line.
+
+**Preferred**:
+
+```swift
+@objc 
+func refreshAllProjects(deleteAllData: Bool = true) {
+
+        retrieveProjects()
+}
+```
+
+**Not Preferred**:
+
+```swift
+@objc func refreshAllProjects(deleteAllData: Bool = true) {
+
+        retrieveProjects()
+}
+
 
 ## Linting
 
