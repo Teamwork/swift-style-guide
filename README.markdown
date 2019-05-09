@@ -658,6 +658,23 @@ func reticulateSplines(spline: [Double]) -> Bool {
   // reticulate code goes here
 }
 ```
+
+When creating a function that has a verb in it's name; `add()`, `remove()` etc..  and the overall context of the parameter is inferred by the name of the class, then you should avoid declaring an external paramer label within the function. 
+For example, in a class called TaskList, if you have a function `add(task: Task)` it is obvious to the user that "add" refers to a task. Therefore it would be more succint and readable to use an underscore instead of task.
+
+Calling this function would now look more like proper English: `TaskList().add(task)` _"task list: add task_
+
+
+**Preferred:**
+```swift
+func add(_ task: Task) {}
+```
+
+**Not preferred:**
+```swift
+func add(task: Task) {}
+```
+
 For functions with long signatures (more than two parameters), add line breaks after each parameter:
 
 **Preferred:**
